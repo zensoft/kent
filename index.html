@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kent</title>
+
+    <!--<link href='http://fonts.googleapis.com/css?family=Arbutus+Slab&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+
+<!--<style>-->
+    <!--body {-->
+        <!--font-family: 'Arbutus Slab', sans-serif;-->
+    <!--}-->
+<!--</style>-->
+
+<link href='http://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<style>
+    body {
+        font-family: 'Arima Madurai', sans-serif;
+    }
+</style>
+
+<link rel="stylesheet" href="/kent_static/css/dist/libs.min.css?version=1484343372704">
+<link rel="stylesheet" href="/kent_static/css/dist/app.min.css?version=1484343372704">
+    <script src="/kent_static/js/dist/libs.min.js?version=1484343372704" ></script>
+<script src="/kent_static/js/dist/app.min.js?version=1484343372704" ></script>
+
+</head>
+<body>
+
+<div id="content-wrapper">
+    <div id="kent-wrapper">
+        <div class="scrollContent">
+            <section class="demo" id="section-wipes">
+                <section class="titlechart slide-one" class="anime_me" style="background-image: url(/kent_static/imgs/slide_01.png);">
+                    <div class="cat_image_holder img_border">
+                        <img src="/kent_static/imgs/001_sad_cat.png" height="400px">
+                    </div>
+                    <div class="description font-white">
+                        <h1>Masz dość siedzenia samemu w domu?</h1>
+                    </div>
+                </section>
+                <section class="panel yellow-bcg titlechart slide-two" style="background-image: url(/kent_static/imgs/slide_beer.png);">
+                    <div id="test_load" class="description font-white" style="opacity: 0">
+                        <h1>Może chodzi za Tobą piwo?</h1>
+                    </div>
+                    <div class="track" style="opacity: 0">
+                        <div class="kurt">
+                            <div class="beer-loader"></div>
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="panel slide-three">
+                    <div class="img_border top_left">
+                        <img src="/kent_static/imgs/wow_dog.jpg">
+                    </div>
+                    <div class="img_border top_right">
+                        <img src="/kent_static/imgs/wow_dog.jpg">
+                    </div>
+                    <div class="img_border bottom_left">
+                        <img src="/kent_static/imgs/wow_dog.jpg">
+                    </div>
+                    <div class="img_border bottom_right">
+                        <img src="/kent_static/imgs/wow_dog.jpg">
+                    </div>
+                    <div id="test1" style="opacity: 0" class="description">
+                        <h1>Przygotuj się na rewolucję!</h1>
+                    </div>
+                </section>
+
+                <section class="panel slide-four" style="background-color: #e05038;background-image: url(/kent_static/imgs/slide_05.png);">
+                    <div class="nyan_div">
+                        <img src="/kent_static/imgs/nyan_cat.png">
+                    </div>
+                    <div class="description" style="top:40%">
+                        <h1 class="wow_words">Przed Tobą<br/>
+                            <span class="first">jedyny,</span><br/>
+                            <span class="second">unikalny,</span><br/>
+                            <span class="third">spełniający Twoje towarzyskie marzenia</span><br/>
+                            <span class="four">Turniej gry w Kenta!</span>
+                        </h1>
+                    </div>
+                </section>
+
+                <section class="panel slide-five" style="background-image: url(/kent_static/imgs/slide_01.png);">
+                    <div class="img_border gracjan">
+                        <img src="/kent_static/imgs/gracjan.jpg" height="250px">
+                    </div>
+                    <div class="description font-white" style="opacity: 0">
+                        <h1>Masz problem z nawiązywaniem znajomości?</h1>
+                        <h1>Ta gra jest dla Ciebie!</h1>
+                    </div>
+                </section>
+
+                <section class="panel slide-six" style="background-image: url(/kent_static/imgs/slide_03.png);">
+                    <div class="img_border programmers">
+                        <img src="/kent_static/imgs/programmers.jpg" height="250px">
+                    </div>
+                    <div class="description" style="opacity: 0">
+                        <h1>Jesteś mistrzem kontaktów towarzyskich?</h1>
+                        <h1>Ta gra jest dla Ciebie!</h1>
+                    </div>
+                </section>
+
+                <section class="panel slide-seven" style="background-image: url(/kent_static/imgs/symphony.png);">
+                    <div class="description" style="opacity: 0">
+                        <h1>Sprawdź zasady! <a target="_blank" href="https://pl.wikipedia.org/wiki/Kent_(gra)">KLIK</a></h1>
+                        <h1>Ogarnij kogoś do pary!</h1>
+                    </div>
+                </section>
+
+                <section class="panel slide-eight" style="background-image: url(/kent_static/imgs/demo_parallax_bg.png);">
+                    <div class="description" style="opacity: 0">
+                        <h1>Nie masz z kim grać?</h1>
+                        <h1>Nic nie szkodzi, coś wymyślimy!</h1>
+                    </div>
+                </section>
+
+                <section class="panel slide-nine" style="background-color: lightblue; background-image: url(/kent_static/imgs/last.png);">
+                    <div class="description  last" style="color: whitesmoke">
+                        <h1>Nie trać czasu, napisz, że chcesz grać!</h1>
+                        <h2 style="font-size: 30px">Lub pić piwo.</h2>
+                    </div>
+                </section>
+
+                <script>
+
+                    function initPins() {
+                        var controller = new ScrollMagic.Controller({
+                            globalSceneOptions: {
+                                triggerHook: 'onLeave'
+                            }
+                        });
+
+                        var slides = document.querySelectorAll("section.panel");
+                        for (var i=0; i<slides.length; i++) {
+                            new ScrollMagic.Scene({
+                                triggerElement: slides[i]
+                            })
+                                .setPin(slides[i])
+                                //.addIndicators()
+                                .addTo(controller);
+                        }
+                    }
+
+                    $(function () { // wait for document ready
+                        // init
+                        var controller1 = new ScrollMagic.Controller({
+                            globalSceneOptions: {
+                                triggerHook: 0.4
+                            }
+                        });
+
+                        var controller2 = new ScrollMagic.Controller({
+                            globalSceneOptions: {
+                                triggerHook: 0.2
+                            }
+                        });
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-three")[0]
+                            //,duration: 300
+                        })
+                            .setTween("#test1", 0.40, {opacity: 1, rotation: 360})
+                            //.addIndicators()
+                            .addTo(controller2);
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-three")[0]
+                        })
+                            .on("enter", function(){
+                                $(".slide-three .img_border").addClass("show");
+                            })
+                            //.addIndicators()
+                            .addTo(controller2);
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-two")[0]
+                            //,duration: 300
+                        })
+                            .setTween("#test_load", 0.8, {opacity: 1})
+                            //.addIndicators()
+                            .addTo(controller1);
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-two")[0]
+                            //,duration: 300
+                        })
+                            .setTween(".track", 1.10, {opacity: 1})
+                            //.addIndicators()
+                            .addTo(controller1);
+
+
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-four")[0]
+                        })
+                            .on("enter", function(){
+                                $(".wow_words .first").addClass("wow-1");
+                                $(".wow_words .second").addClass("wow-2");
+                                $(".wow_words .third").addClass("wow-3");
+                                $(".wow_words .four").addClass("wow-4");
+                            })
+                            .on("leave", function(){
+                            })
+                            //.addIndicators()
+                            .addTo(controller2);
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-five")[0]
+                        })
+                            .on("enter", function(){
+                                $(".slide-five div.description").toggleClass("anim-left");
+                                $(".slide-five div.gracjan").toggleClass("anim-left");
+                            })
+                            .on("leave", function(){
+                                $(".slide-five div.description").toggleClass("anim-left");
+                                $(".slide-five div.gracjan").toggleClass("anim-left");
+                            })
+                            //.addIndicators()
+                            .addTo(controller1);
+
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-six")[0]
+                        })
+                            .on("enter", function(){
+                                $(".slide-six div.description").toggleClass("anim-right");
+                                $(".slide-six div.programmers").toggleClass("anim-right");
+                            })
+                            .on("leave", function(){
+                                $(".slide-six div.description").toggleClass("anim-right");
+                                $(".slide-six div.programmers").toggleClass("anim-right");
+                            })
+                            //.addIndicators()
+                            .addTo(controller1);
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-seven")[0]
+                        })
+                            .on("enter", function(){
+                                $(".slide-seven div.description").toggleClass("anim-top");
+                            })
+                            .on("leave", function(){
+                                $(".slide-seven div.description").toggleClass("anim-top");
+                            })
+                            //.addIndicators()
+                            .addTo(controller1);
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-eight")[0]
+                        })
+                            .on("enter", function(){
+                                $(".slide-eight div.description").toggleClass("anim-down");
+                            })
+                            .on("leave", function(){
+                                $(".slide-eight div.description").toggleClass("anim-down");
+                            })
+                            //.addIndicators()
+                            .addTo(controller1);
+
+                        initPins();
+                    });
+                </script>
+            </section>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

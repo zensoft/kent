@@ -1,0 +1,531 @@
+/*
+	Containers
+*/
+#content-wrapper, #kent-wrapper {
+	height: 100%;
+}
+.scrollContainer {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100%
+}
+.scrollContainer {
+	height: 100%;
+	margin: auto;
+}
+#kent-wrapper .scrollContent {
+	height: 100%;
+}
+
+.horizontal.scrollContainer {
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+#kent-wrapper.scrollContainer .scrollContent {
+	width: 100%;
+	height: auto;
+}
+#kent-wrapper.scrollContainer.horizontal .scrollContent {
+	width: auto;
+	height: 100%;
+}
+#kent-wrapper.horizontal {
+	white-space: nowrap;
+	font-size: 0;  /* fix for spaces between inline block divs */
+}
+#kent-wrapper.horizontal div {
+	font-size: 13px;
+}
+#kent-wrapper .scrollContent, #kent-wrapper.horizontal .scrollContent {
+	font-size: 0;
+}
+#kent-wrapper .scrollContent div {
+	font-size: 13px;
+}
+
+section.titlechart {
+	text-align: center;
+	position: relative;
+	height: 100%;
+	min-height: 500px;
+	min-width: 100%;
+	height: 100vh;
+}
+
+.description {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	width: 450px;
+	height: 300px;
+	margin: -150px auto auto -225px;
+}
+
+.description:after {
+	content: "↧";
+	font-size: 40px;
+	display: block;
+}
+
+.last:after {
+    content: '';
+    display: none;
+}
+
+section.demo {
+	text-align: center;
+}
+/*section.demo * {*/
+	/*font-size: 13px;*/
+/*}*/
+/*section.demo {*/
+	/*font-size: 0;*/
+	/*text-align: center;*/
+/*}*/
+section.demo.fullheight {
+	min-height: 100%;
+}
+section.demo.doublewidth, .spacer.doublewidth {
+	min-width: 200%;
+}
+.horizontal section.demo {
+	text-align: inherit;
+	white-space: nowrap;
+}
+.horizontal section.demo.fullwidth {
+	min-width: 100%;
+}
+/*
+	colors
+*/
+
+.box1.outline, .box2.outline, .box3.outline {
+	border: 1px solid white;
+}
+.blue {
+	background-color: #3883d8;
+}
+.turqoise {
+	background-color: #38ced7;
+}
+.brown {
+	background-color: #a66f28;
+}
+.bordeaux {
+	background-color: #953543;
+}
+.skin {
+	background-color: #ED9F4C;
+}
+.black {
+	background-color: #000000;
+}
+.white {
+	background-color: #FFFFFF;
+}
+.red {
+	background-color: #cf3535;
+}
+.green {
+	background-color: #22d659;
+}
+.orange {
+	background-color: #ea6300;
+}
+
+/*
+	Codecontainer
+*/
+#codecontainer {
+	position: fixed;
+	top: 30px;
+	bottom: 20px;
+	right: 20px;
+	left: 20px;
+	background-color: white;
+	border-radius: 4px;
+	z-index: 99999;
+	min-height: 300px;
+}
+#codecontainer pre {
+	margin: 0;
+	padding: 0;
+	line-height: 16px;
+	tab-size: 4;
+}
+#codecontainer pre .break {
+	background-color: #F6F6F6;
+	font-weight: bold;
+	color: #aaa;
+}
+#codecontainer pre .break:before {
+	content: "᎒"
+}
+#codecontainer .codewrap {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	width: 100%;
+	overflow: hidden;
+	overflow: scroll;
+	white-space: nowrap;
+}
+#codecontainer .code, #codecontainer .linenumbers {
+	min-height: 100%;
+}
+#codecontainer .code {
+	padding: 0;
+	display: inline-block;
+}
+#codecontainer .code {
+	padding: 0 15px 10px 5px;
+}
+#codecontainer .linenumbers {
+	float: left;
+	padding: 0px 5px 0px 10px;
+	color: #aaa;
+	text-align: right;
+	border-right: 1px solid #e5e5e5;
+}
+#codecontainer span.indent {
+	width: 31px;
+	display: inline-block;
+	white-space: nowrap;
+}
+#codecontainer #close.button {
+	position: fixed;
+	top: 20px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+}
+#codecontainer #select.button {
+	position: fixed;
+	top: 20px;
+	right: 40px;
+	height: 20px;
+	padding: 0 10px 0 10px;
+}
+#codecontainer #close.button:after {
+	content: "྾";
+}
+#codecontainer .button {
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	cursor: pointer;
+	color: #2e639e;
+}
+#codecontainer .button:hover {
+	background-color: #3883d8;
+	color: white;
+}
+
+/*
+	OTHER
+*/
+a.viewsource:after {
+	content: " }";
+}
+a.viewsource:before {
+	content: "{ ";
+}
+
+#parallaxContainer {
+	width: 900px;
+	height: 500px;
+	top: 30px;
+	position: relative;
+}
+#parallaxContainer .layer1 {
+	height: 100%;
+	text-align: center;
+}
+#parallaxContainer .layer2 {
+	position: absolute;
+	height: 139px;
+	width: 100%;
+	bottom: 32px
+}
+#parallaxContainer .layer3 {
+	position: absolute;
+	height: 32px;
+	width: 100%;
+	bottom: 0px;
+}
+#parallaxText {
+	width: 0;
+	height: 100%;
+	margin: auto;
+	position: relative;
+}
+#parallaxText .layer1, #parallaxText .layer2, #parallaxText .layer3 {
+	position: absolute;
+	font-size: 50px;
+	line-height: 50px;
+	margin-left: -150px;
+	margin-top: -25px;
+	width: 300px;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	color: #133f71;
+}
+#parallaxText .layer1 {
+	top: 48%;
+}
+#parallaxText .layer2 {
+	top: 49%;
+}
+#parallaxText .layer3 a {
+	display: block;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+#parallax1 > div, #parallax2 > div, #parallax3 > div {
+	-webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;-webkit-perspective: 1000;
+}
+
+.dynamicContent #content {
+	width: 390px;
+	margin: auto;
+	text-align: left;
+}
+.dynamicContent #content .box1 {
+	margin: 10px;
+}
+
+.dynamicContent #loader {
+	height: 0;
+	overflow: hidden;
+	line-height: 60px;
+}
+.dynamicContent #loader.active {
+	height: 60px;
+}
+.dynamicContent #loader img {
+	vertical-align: text-bottom;
+}
+
+#customactions {
+	height: 160px;
+	width: 170px;
+	margin: auto;
+	padding-top: 40px;
+	text-align: left;
+}
+#customactions label {
+	width: 100px;
+	display: inline-block;
+}
+#customactions code {
+	color: #3883d8;
+}
+#customactions a.viewsource {
+	margin-top: 20px;
+	display: block;
+	text-align: center;
+}
+.demo.responsiveDuration {
+	position: relative;
+}
+.responsiveDuration .box1 {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	margin-top: -50px;
+	margin-left: -50px;
+}
+#destroybox a {
+	display: block;
+	margin-top: 20px;
+}
+#destroybox a.disabled {
+	color: #79b0ee;
+}
+#mobileadvanced {
+	width: 150px;
+	height: 150px;
+}
+#mobileadvanced p {
+	margin-top: 50px;
+}
+#multiDirect {
+	text-align: left;
+	position: relative;
+}
+#multiDirect .box1 {
+	left: 50vw;
+	top: 200px;
+	margin-left: -60px;
+}
+#multiDirect .box1 p:first-child {
+	margin-top: 20px;
+}
+
+#imagesequence {
+	height: 300px;
+}
+
+.copyright {
+	font-variant: italic;
+	font-size: 11px;
+}
+
+#bezier {
+	overflow: hidden;
+	position: relative;
+}
+#bezier #plane {
+	position: absolute;
+	left: -100px;
+}
+#bezier a.viewsource {
+	margin: 100px;
+	display: inline-block;
+}
+
+.demo#section-slides, .demo#section-wipes {
+	height: 100%;
+	width: 100%;
+	background-image: none;
+}
+
+.demo#section-slides .panel > b, .demo#section-wipes .panel > b {
+	font-size: 15px;
+	color: white;
+	position: relative;
+	display: block;
+	height: 0;
+	overflow: visible;
+	top: 50%;
+}
+
+/*
+
+Codehighlighting
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  color: #333;
+  /*background: #f8f8f8*/
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #d14
+}
+
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold
+}
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080
+}
+
+.hljs-regexp {
+  color: #009926
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073
+}
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold
+}
+
+.hljs-deletion {
+  background: #fdd
+}
+
+.hljs-addition {
+  background: #dfd
+}
+
+.diff .hljs-change {
+  background: #0086b3
+}
+
+.hljs-chunk {
+  color: #aaa
+}
