@@ -281,6 +281,49 @@
     margin-top: -125px;
     opacity: 0;
 }
+.game_table {
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    height: 250px;
+    margin-top: -125px;
+}
+
+.wheel-content {
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    height: 250px;
+    margin-top: -125px;
+}
+
+#wheel {
+    animation: wheelAnim 4s linear infinite;
+}
+
+@keyframes wheelAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#wheel-arrow {
+    position: absolute;
+    z-index: 1;
+    animation: wheelArrowAnim 1100ms linear infinite;
+}
+
+@keyframes wheelArrowAnim {
+    0%, 100% {
+        top: -3%;
+    }
+    50% {
+        top: 3%;
+    }
+}
 
 .gracjan {
     position: absolute;
@@ -291,6 +334,14 @@
     opacity: 0;
 }
 
+.rada {
+    position: absolute;
+    top: 50%;
+    right: 200px;
+    height: 250px;
+    margin-top: -125px;
+    opacity: 0;
+}
 
 .nyan_div {
     position: absolute;

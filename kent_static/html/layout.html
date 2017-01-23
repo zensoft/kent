@@ -55,7 +55,7 @@
                     <div class="nyan_div">
                         <img src="/kent_static/imgs/nyan_cat.png">
                     </div>
-                    <div class="description" style="top:40%">
+                    <div class="description" style="top:40%;">
                         <h1 class="wow_words">Przed Tobą<br/>
                             <span class="first">jedyny,</span><br/>
                             <span class="second">unikalny,</span><br/>
@@ -86,6 +86,9 @@
                 </section>
 
                 <section class="panel slide-seven" style="background-image: url(/kent_static/imgs/symphony.png);">
+                    <div class="img_border game_table">
+                        <img src="/kent_static/imgs/zasady-1-picture.jpg" height="350px">
+                    </div>
                     <div class="description" style="opacity: 0">
                         <h1>Sprawdź zasady! <a target="_blank" href="https://pl.wikipedia.org/wiki/Kent_(gra)">KLIK</a></h1>
                         <h1>Ogarnij kogoś do pary!</h1>
@@ -93,16 +96,24 @@
                 </section>
 
                 <section class="panel slide-eight" style="background-image: url(/kent_static/imgs/demo_parallax_bg.png);">
+                    <div class="wheel-content">
+                        <img id="wheel-arrow" src="/kent_static/imgs/wheel-arrow.png" height="300px" >
+                        <img id="wheel" src="/kent_static/imgs/wheel.png" height="300px">
+                    </div>
                     <div class="description" style="opacity: 0">
                         <h1>Nie masz z kim grać?</h1>
                         <h1>Nic nie szkodzi, coś wymyślimy!</h1>
                     </div>
                 </section>
 
-                <section class="panel slide-nine" style="background-color: lightblue; background-image: url(/kent_static/imgs/last.png);">
+                <section class="panel slide-nine" style="background-color: lightblue; background-image: url(/kent_static/imgs/last-2.png);">
+                    <div class="img_border rada">
+                        <img src="/kent_static/imgs/rada.jpeg" height="300px">
+                    </div>
                     <div class="description  last" style="color: whitesmoke">
                         <h1>Nie trać czasu, napisz, że chcesz grać!</h1>
                         <h2 style="font-size: 30px">Lub pić piwo.</h2>
+                        <h1><a target="_blank" href="https://docs.google.com/spreadsheets/d/1huJHbUkP7CAFvGLSpEoysvLTJyAHOK-D0Sn43uFRmX8/edit#gid=0">KLIK</a></h1>
                     </div>
                 </section>
 
@@ -223,9 +234,11 @@
                         })
                             .on("enter", function(){
                                 $(".slide-seven div.description").toggleClass("anim-top");
+                                $(".slide-six div.game_table").toggleClass("anim-right");
                             })
                             .on("leave", function(){
                                 $(".slide-seven div.description").toggleClass("anim-top");
+                                $(".slide-six div.game_table").toggleClass("anim-right");
                             })
                             //.addIndicators()
                             .addTo(controller1);
@@ -238,6 +251,18 @@
                             })
                             .on("leave", function(){
                                 $(".slide-eight div.description").toggleClass("anim-down");
+                            })
+                            //.addIndicators()
+                            .addTo(controller1);
+
+                        new ScrollMagic.Scene({
+                            triggerElement: $(".slide-nine")[0]
+                        })
+                            .on("enter", function(){
+                                $(".slide-nine div.rada").toggleClass("anim-left");
+                            })
+                            .on("leave", function(){
+                                $(".slide-nine div.rada").toggleClass("anim-left");
                             })
                             //.addIndicators()
                             .addTo(controller1);
